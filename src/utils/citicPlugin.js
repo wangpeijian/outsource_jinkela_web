@@ -110,9 +110,13 @@ class citicPlugin {
             const bottomPosition = standardEl.offsetTop + standardEl.offsetHeight;
 
             if (scrollTop + clientHeight >= bottomPosition - offset) {
-                el.style.position = "static";
+                el.style.position = "relative";
+                el.className = el.className.replace(/ fixed-mark/g, '')
             } else {
                 el.style.position = "fixed";
+                if(!el.className.includes('fixed-mark')){
+                    el.className += ' fixed-mark';
+                }
             }
         }
 
@@ -138,6 +142,52 @@ class citicPlugin {
                 delete window.__directiveFloatBottom__;
                 window.removeEventListener("scroll", _handleBottomFloat);
                 document.removeEventListener('DOMSubtreeModified', _handleBottomFloat);
+            }
+        });
+
+        /**
+         * 处理底部跟随浮动逻辑
+         * @param e
+         * @private
+         */
+        function _handleTopFixed(e) {
+            const { el, standardEl, offset } = window.__directiveFloatTop__;
+            const scrollTop = document.documentElement.scrollTop;
+            const topPosition = standardEl.offsetTop;
+
+            if (scrollTop > topPosition - offset) {
+                el.style.position = "fixed";
+                if(!el.className.includes('fixed-mark')){
+                    el.className += ' fixed-mark';
+                }
+            } else {
+                el.style.position = "relative";
+                el.className = el.className.replace(/ fixed-mark/g, '')
+            }
+        }
+
+        /**
+         * 定义元素跟随浮动效果
+         * value 为浮层改变的偏移量，为正数则提前变为正常位置
+         */
+        Vue.directive('float-top', {
+            inserted(el, binding, vnode) {
+                //获取基准元素
+                const standardEl = document.getElementById(binding.arg);
+                let offset = 0;
+                if (binding.value) {
+                    offset = binding.value;
+                }
+                window.__directiveFloatTop__ = { el, standardEl, offset };
+                window.addEventListener("scroll", _handleTopFixed);
+                document.addEventListener('DOMSubtreeModified', _handleTopFixed, false);
+                setTimeout(_handleTopFixed, 0);
+            },
+
+            unbind(el, binding, vnode) {
+                delete window.__directiveFloatTop__;
+                window.removeEventListener("scroll", _handleTopFixed);
+                document.removeEventListener('DOMSubtreeModified', _handleTopFixed);
             }
         })
     }
