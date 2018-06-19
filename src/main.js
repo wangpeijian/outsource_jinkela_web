@@ -7,10 +7,10 @@ import router from './router'
 Vue.config.productionTip = false
 
 import './assets/reset.scss'
-import citicPlug from './utils/citicPlugin';
-import vueBroadcastPlugin from './utils/vueBroadcastPlugin';
-Vue.use(citicPlug);
-Vue.use(vueBroadcastPlugin);
+import plugin from './utils/plugin';
+
+Vue.use(plugin);
+
 
 /* eslint-disable no-new */
 new Vue({
