@@ -1,18 +1,22 @@
 <style scoped lang="scss">
-    .content{
+    .content {
         width: 1440px;
         margin: 0 auto;
     }
 
-    .bg{
+    .bg {
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
     }
 
-    .home{
+    $timerBig: 20s;
+    $timerWave: 10s;
 
-        .header{
+
+    .home {
+
+        .header {
             color: #fff;
             height: 80px;
             background: rgba(0, 0, 0, 0);
@@ -23,17 +27,17 @@
             width: 100%;
             z-index: 99;
 
-            &.fixed-mark{
+            &.fixed-mark {
                 background: #4b91ff;
             }
 
-            .content{
+            .content {
                 height: 100%;
                 position: relative;
                 max-width: 1440px;
                 width: auto;
 
-                .logo{
+                .logo {
                     position: absolute;
                     top: 26px;
                     left: 135px;
@@ -41,7 +45,7 @@
                     cursor: pointer;
                 }
 
-                .menu{
+                .menu {
                     position: absolute;
                     top: 21px;
                     right: 127px;
@@ -57,13 +61,13 @@
                         transition: .2s;
                         font-size: 14px;
 
-                        &:hover{
+                        &:hover {
                             background: #fff;
                             color: #282B31;
                         }
                     }
 
-                    .menu-btn{
+                    .menu-btn {
                         display: inline-block;
                         background: url("../../static/svg/menu.svg") center no-repeat;
                         background-size: contain;
@@ -77,11 +81,11 @@
             }
         }
 
-        .banner{
+        .banner {
             height: 716px;
             margin-bottom: 270px;
 
-            .content{
+            .content {
                 height: 100%;
                 position: relative;
 
@@ -94,62 +98,26 @@
                     background-image: url("../../static/img/logo.jpg");
                 }
 
-                .slogan{
+                .slogan {
                     color: #fff;
                     position: absolute;
                     top: 375px;
                     left: 135px;
 
-                    .title{
+                    .title {
                         font-weight: normal;
                         font-size: 35px;
                         margin-bottom: 10px;
                     }
 
-                    .sub-title{
+                    .sub-title {
                         font-size: 20px;
+                        margin-bottom: 15px;
                     }
 
-
-                    .btn-group{
-                        margin-top: 40px;
-                        line-height: 50px;
-                        font-size: 17px;
-
-                        .scan{
-                            width: 167px;
-                            height: 50px;
-                            margin-right: 20px;
-                            border-radius: 6px;
-                            background: linear-gradient(to right, #FF8E64 , #FFE641);
-                            color: #fff;
-                            border: none;
-                            cursor: pointer;
-                            transition: .3s;
-
-                            &:active{
-                                background: linear-gradient(to right, #f78b5f, #f7de3e);
-                            }
-                        }
-
-                        .about{
-                            width: 144px;
-                            height: 50px;
-                            border-radius: 6px;
-                            color: #282B31;
-                            background: #fff;
-                            border: none;
-                            cursor: pointer;
-                            transition: .3s;
-
-                            &:active{
-                                background: rgb(247, 247, 247);
-                            }
-                        }
-                    }
                 }
 
-                .phone{
+                .phone {
                     position: absolute;
                     top: 136px;
                     right: 235px;
@@ -159,14 +127,14 @@
             }
         }
 
-        .data{
+        .data {
             width: 1440px;
             margin: 0 auto;
             height: 250px;
             background: #fff;
             position: relative;
 
-            .data-panel{
+            .data-panel {
                 position: absolute;
                 left: 120px;
                 bottom: 74px;
@@ -176,18 +144,18 @@
                 text-align: center;
                 padding-top: 55px;
 
-                .info{
+                .info {
                     width: 220px;
                     display: inline-block;
                     color: #fff;
 
-                    .label{
+                    .label {
                         font-size: 24px;
                         display: block;
                         position: relative;
                         padding-bottom: 15px;
 
-                        .sub{
+                        .sub {
                             font-size: 12px;
                             position: absolute;
                             left: 0;
@@ -196,7 +164,7 @@
                         }
                     }
 
-                    .num{
+                    .num {
                         font-size: 100px;
                         display: block;
                     }
@@ -204,11 +172,11 @@
             }
         }
 
-        .evaluate{
+        .evaluate {
             height: 820px;
             position: relative;
 
-            &::before, &::after{
+            &::before, &::after {
                 content: "";
                 display: block;
                 width: 50%;
@@ -219,27 +187,27 @@
                 z-index: -1;
             }
 
-            &::before{
+            &::before {
                 left: 0;
                 /*background: #fff;*/
             }
 
-            &::after{
+            &::after {
                 right: 0;
                 /*background: #F8F9FA;*/
             }
 
-            .content{
+            .content {
                 overflow: hidden;
                 height: 100%;
 
-                .left{
+                .left {
                     width: 535px;
                     float: left;
                     height: 100%;
                 }
 
-                .right{
+                .right {
                     width: 905px;
                     float: left;
                     height: 100%;
@@ -247,119 +215,62 @@
                     position: relative;
                     overflow: hidden;
 
-                    .dialog{
+                    .dialog {
                         width: 570px;
                         height: 180px;
-                        background: #fff;
-                        border-radius: 12px;
-                        box-shadow:0 6px 12px 0 rgba(32,33,39,0.08);
                         position: absolute;
                         transition: 2.5s;
 
-                        .head{
-                            width: 50px;
-                            height: 50px;
-                            border-radius: 50%;
-                            position: absolute;
-                            top: 30px;
-                            left: 30px;
-                            background: red;
-                        }
-
-                        .text{
-                            width:430px;
-                            font-size:14px;
-                            color:rgba(40,43,49,1);
-                            line-height:25px;
-                            position: absolute;
-                            top: 23px;
-                            font-weight: bold;
-                        }
-
-                        .line{
-                            width:510px;
-                            height:1px;
-                            background:rgba(231,232,234,1);
-                            margin: 120px auto 0 auto;
-                        }
-
-                        .icon{
-                            display: inline-block;
-                            width:16px;
-                            height: 16px;
-                            background: url("../../static/svg/twitter.svg") center no-repeat;
-                            background-size: contain;
-                            position: absolute;
-                            bottom: 30px;
-                            right: 30px;
-                        }
-
-                        .label{
-                            margin: 13px 30px 0 30px;
-                            display: block;
-                            font-size:12px;
-                            color:rgba(153,158,168,1);
-                            line-height:25px;
-                        }
-
-                        &.d-1{
-                            top: 120px;
+                        &.d-1 {
+                            top: 20px;
                             left: 100px;
                             transform: translateX(-250%);
 
-                            .text{
-                                right: 30px;
-                            }
                         }
 
-                        &.d-2{
-                            top: 320px;
+                        &.d-2 {
+                            top: 210px;
                             left: 200px;
                             transform: translateX(250%);
 
-                            .head{
-                                right: 30px;
-                                left: auto;
-                            }
-
-                            .text{
-                                left: 30px;
-                                text-align: right;
-                            }
-
-                            .icon{
-                                left: 30px;
-                                right: auto;
-                            }
-
-                            .label{
-                                text-align: right;
-                            }
                         }
 
-                        &.d-3{
-                            top: 520px;
+                        &.d-3 {
+                            top: 400px;
                             left: 100px;
                             transform: translateX(-250%);
 
-                            .text{
-                                right: 30px;
-                            }
                         }
 
-                        &.fixed-mark{
+                        &.d-4 {
+                            top: 590px;
+                            left: 200px;
+                            transform: translateX(250%);
+                        }
+
+                        &.fixed-mark {
                             transform: translateX(0%);
                         }
+                    }
+
+                    .input {
+                        background: url("../../static/img/input.png") center no-repeat;
+                        background-size: contain;
+                        position: absolute;
+                        bottom: 10px;
+                        left: 98px;
+                        width: 673px;
+                        height: 33px;
                     }
                 }
             }
         }
 
-        .recommend{
+        .recommend {
             height: 1001px;
             position: relative;
 
-            &::before, &::after{
+            &::before, &::after {
                 content: "";
                 display: block;
                 width: 50%;
@@ -370,38 +281,38 @@
                 z-index: -1;
             }
 
-            &::before{
+            &::before {
                 left: 0;
                 background: #4596ff;
             }
 
-            &::after{
+            &::after {
                 right: 0;
                 background: #42bfff;
             }
 
-            .content{
+            .content {
                 height: 100%;
                 position: relative;
 
-                .oval{
+                .oval {
                     position: absolute;
 
-                    &.oval-1{
+                    &.oval-1 {
                         height: 500px;
                         width: 500px;
                         top: 150px;
                         left: 163px;
                     }
 
-                    &.oval-2{
+                    &.oval-2 {
                         height: 500px;
                         width: 500px;
                         top: 123px;
                         left: 753px;
                     }
 
-                    &.oval-3{
+                    &.oval-3 {
                         height: 663px;
                         width: 663px;
                         top: 171px;
@@ -409,14 +320,14 @@
                         z-index: 2;
                     }
 
-                    &.oval-4{
+                    &.oval-4 {
                         height: 381px;
                         width: 381px;
                         top: 499px;
                         left: 295px;
                     }
 
-                    &.oval-5{
+                    &.oval-5 {
                         height: 556px;
                         width: 556px;
                         top: 455px;
@@ -426,23 +337,23 @@
             }
         }
 
-        .institution{
-            height: 628px;
+        .institution {
+            height: 528px;
             background: #fff;
 
-            .content{
+            .content {
 
-                .title{
+                .title {
                     width: 833px;
                     height: 204px;
                     margin: 85px auto 35px auto;
                     background-size: 80%;
                 }
 
-                .panel-group{
+                .panel-group {
                     text-align: center;
 
-                    .panel{
+                    .panel {
                         width: 322px;
                         height: 228px;
                         display: inline-block;
@@ -451,116 +362,374 @@
             }
         }
 
-        .capital{
+        .capital {
             height: 894px;
-            background:linear-gradient(134.9deg,rgba(255,255,255,1),rgba(183,190,172,1));
-            position: relative;
+            background: #fff;
 
-           /* &::before, &::after{
-                content: "";
-                display: block;
-                width: 50%;
-                position: absolute;
-                top: 0;
-                bottom: 0;
-                height: 100%;
-                z-index: -1;
-            }
+            .content {
+                padding-top: 50px;
 
-            &::before{
-                left: 0;
-                background: #fff;
-            }
+                .radar-panel{
+                    position: relative;
+                    width: 755px;
+                    height: 755px;
+                    margin: 0 auto;
+                    /*background: red;*/
 
-            &::after{
-                right: 0;
-                background: #B7BEAC;
-            }*/
+                    .radar-big{
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        width: 100%;
+                        height: 100%;
+                        animation: bigRadar $timerBig infinite linear;
 
-            .content{
+                        @keyframes bigRadar{
+                            from{
+                                transform: rotate(0deg);
+                            }
 
-            }
-        }
-
-        .partner{
-            height: 988px;
-            background: #333743;
-
-            .table{
-                padding: 112px 132px;
-                display: block;
-
-                .row{
-                    overflow: hidden;
-                    border-bottom: 2px solid #fff;
-
-                    &:last-child{
-                        border: none;
+                            to{
+                                transform: rotate(360deg);
+                            }
+                        }
                     }
 
-                    .cell{
-                        text-align: center;
-                        float: left;
-                        height: 232px;
-                        width: 33%;
-                        border-right: 2px solid #fff;
+                    .radar-min{
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        width: 100%;
+                        height: 100%;
+                        animation: minRadar $timerBig infinite linear;
 
-                        &:last-child{
-                            border: none;
+                        @keyframes minRadar{
+                            from{
+                                transform: rotate(0deg);
+                            }
+
+                            to{
+                                transform: rotate(-360deg);
+                            }
+                        }
+                    }
+
+                    .radar-logo{
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+                        transform: translate(-50%, -50%);
+                        width: 284px;
+                        height: 284px;
+                    }
+
+                    .radar-wave{
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        width: 100%;
+                        height: 100%;
+                        animation: minWave $timerWave infinite linear;
+
+                        @keyframes minWave{
+                            from{
+                                transform: rotate(0deg);
+                            }
+
+                            to{
+                                transform: rotate(360deg);
+                            }
+                        }
+                    }
+
+                    .target{
+                        position: absolute;
+                        background-size: contain;
+                        opacity: 0;
+
+                        &.target-1{
+                            top: 0;
+                            left: 300px;
+                            width: 130px;
+                            height: 187px;
+
+                            animation: target1 $timerWave infinite linear;
+
+                            @keyframes target1{
+                                0%{
+                                    opacity: 1;
+                                }
+
+                                10%{
+                                    opacity: 0;
+                                }
+
+                                90%{
+                                    opacity: 0;
+                                }
+
+                                100%{
+                                    opacity: 1;
+                                }
+                            }
                         }
 
-                        .logo{
-                            width: 100px;
-                            height: 100px;
-                            border-radius: 50%;
-                            display: inline-block;
-                            background: red;
-                            margin-top: 52px;
+                        &.target-2{
+                            top: 200px;
+                            left: 500px;
+                            width: 131px;
+                            height: 157px;
+
+                            animation: target2 $timerWave infinite linear;
+
+                            @keyframes target2{
+                                0%{
+                                    opacity: 0;
+                                }
+
+                                10%{
+                                    opacity: 1;
+                                }
+
+                                15%{
+                                    opacity: 1;
+                                }
+
+                                25%{
+                                    opacity: 0;
+                                }
+
+                                100%{
+                                    opacity: 0;
+                                }
+                            }
                         }
 
-                        .label{
-                            display: block;
-                            margin-top: 18px;
-                            font-size:18px;
-                            color:rgba(255,255,255,1);
-                            line-height:25px;
+                        &.target-3{
+                            top: 400px;
+                            left: 600px;
+                            width: 181px;
+                            height: 157px;
+
+                            animation: target3 $timerWave infinite linear;
+
+                            @keyframes target3{
+                                0%{
+                                    opacity: 0;
+                                }
+
+                                20%{
+                                    opacity: 0;
+                                }
+
+                                24%{
+                                    opacity: 1;
+                                }
+
+                                28%{
+                                    opacity: 1;
+                                }
+
+                                34%{
+                                    opacity: 0;
+                                }
+
+                                100%{
+                                    opacity: 0;
+                                }
+                            }
+                        }
+
+                        &.target-4{
+                            top: 500px;
+                            left: 400px;
+                            width: 130px;
+                            height: 187px;
+
+                            animation: target4 $timerWave infinite linear;
+
+                            @keyframes target4{
+                                0%{
+                                    opacity: 0;
+                                }
+
+                                30%{
+                                    opacity: 0;
+                                }
+
+                                35%{
+                                    opacity: 1;
+                                }
+
+                                43%{
+                                    opacity: 1;
+                                }
+
+                                48%{
+                                    opacity: 0;
+                                }
+
+                                100%{
+                                    opacity: 0;
+                                }
+                            }
+                        }
+
+                        &.target-5{
+                            top: 500px;
+                            left: 0;
+                            width: 181px;
+                            height: 192px;
+
+                            animation: target5 $timerWave infinite linear;
+
+                            @keyframes target5{
+                                0%{
+                                    opacity: 0;
+                                }
+
+                                50%{
+                                    opacity: 0;
+                                }
+
+                                58%{
+                                    opacity: 1;
+                                }
+
+                                68%{
+                                    opacity: 1;
+                                }
+
+                                78%{
+                                    opacity: 0;
+                                }
+
+                                100%{
+                                    opacity: 0;
+                                }
+                            }
+                        }
+
+                        &.target-6{
+                            top: 200px;
+                            left: 100px;
+                            width: 130px;
+                            height: 187px;
+
+                            animation: target6 10s infinite linear;
+
+                            @keyframes target6{
+                                0%{
+                                    opacity: 0;
+                                }
+
+                                75%{
+                                    opacity: 0;
+                                }
+
+                                80%{
+                                    opacity: 1;
+                                }
+
+                                87%{
+                                    opacity: 1;
+                                }
+
+                                100%{
+                                    opacity: 0;
+                                }
+                            }
                         }
                     }
                 }
             }
         }
 
-        .footer{
+        .partner {
+            height: 1088px;
+            background: #333743;
+
+            .table {
+                padding: 75px 132px;
+                display: block;
+
+                .row {
+                    overflow: hidden;
+                    border-bottom: 2px solid #fff;
+
+                    &:last-child {
+                        border: none;
+                    }
+
+                    .cell {
+                        text-align: center;
+                        float: left;
+                        height: 232px;
+                        width: 25%;
+                        border-right: 2px solid #fff;
+
+                        &:last-child {
+                            border: none;
+                        }
+
+                        .logo {
+                            width: 100px;
+                            height: 100px;
+                            border-radius: 50%;
+                            display: inline-block;
+                            margin-top: 52px;
+
+                            &.last{
+                                border-radius: initial;
+                                width: 253px;
+                                height: 86px;
+                                margin-top: 72px;
+                            }
+                        }
+
+                        .label {
+                            display: block;
+                            margin-top: 18px;
+                            font-size: 18px;
+                            color: rgba(255, 255, 255, 1);
+                            line-height: 25px;
+                        }
+                    }
+                }
+            }
+        }
+
+        .footer {
             height: 493px;
 
-            .content{
+            .content {
                 height: 100%;
                 color: rgba(255, 255, 255, 0.8);
                 position: relative;
 
-                .qrcode-group{
+                .qrcode-group {
                     padding-top: 72px;
                     text-align: center;
 
-                    .item{
+                    .item {
                         margin: 0 87px;
                         text-align: center;
                         width: 210px;
                         display: inline-block;
 
-                        img{
+                        img {
                             width: 210px;
                             display: block;
                             margin-bottom: 10px;
                         }
 
-                        label{
+                        label {
                             font-size: 16px;
                         }
                     }
                 }
 
-                .info{
+                .info {
                     position: absolute;
                     bottom: 30px;
                     left: 0;
@@ -569,15 +738,15 @@
                     text-align: center;
                     line-height: 30px;
 
-                    .local{
+                    .local {
 
                     }
 
-                    .mail{
+                    .mail {
 
                     }
 
-                    .record{
+                    .record {
 
                     }
                 }
@@ -589,7 +758,7 @@
 
 <template>
     <div class="home" id="homeTop">
-        <header class="header" v-float-top:homeTop>
+        <header class="header" :class="{'fixed-mark': headerFixed}">
             <div class="content">
                 <span class="logo">金客拉</span>
                 <p class="menu">
@@ -609,10 +778,9 @@
                     <h2 class="title">金客拉</h2>
                     <p class="sub-title">做金融，更简单</p>
 
-                    <div class="btn-group">
-                        <button class="scan">扫码进入小程序</button>
-                        <button class="about">关于我们</button>
-                    </div>
+                    <p>国内第一家互联网精品投行 </p>
+                    <p>旗下的金牌产品——金客拉小程序</p>
+                    <p>创造了一个全新的“互联网+金融生态圈”</p>
                 </div>
 
                 <div class="phone bg" :style="{'background-image': `url(${Phone})`}"></div>
@@ -647,38 +815,19 @@
             <div class="content">
                 <div class="left bg" :style="{'background-image': `url(${problem})`}"></div>
                 <div class="right">
-                    <div class="dialog d-1" id="d1" v-float-top:d1="200">
-                        <span class="head"></span>
-                        <div class="text">
-                            <p>你还不知道金客拉吗？通过认证上传项目，买方主动就能找到你了！</p>
-                            <p>找人投资可快了～</p>
-                        </div>
-                        <div class="line"></div>
-                        <span class="icon"></span>
-                        <label class="label">玲玲—投行—项目经理</label>
-                    </div>
+                    <div class="dialog bg d-1" :class="{'fixed-mark': d1Fixed}"
+                         :style="{'background-image': `url(${review1})`}"></div>
 
-                    <div class="dialog d-2" id="d2" v-float-top:d2="300">
-                        <span class="head"></span>
-                        <div class="text">
-                            <p>我看你发的朋友圈了，我也没有资金资源。</p>
-                            <p>干紧上金客拉啊～解决公司稀缺额度可快了。</p>
-                        </div>
-                        <div class="line"></div>
-                        <span class="icon"></span>
-                        <label class="label">Juan Richards - Photographer</label>
-                    </div>
+                    <div class="dialog bg d-2" :class="{'fixed-mark': d2Fixed}"
+                         :style="{'background-image': `url(${review2})`}"></div>
 
-                    <div class="dialog d-3" id="d3" v-float-top:d3="400">
-                        <span class="head"></span>
-                        <div class="text">
-                            <p>金客拉上有很多好项目，也有资金方。</p>
-                            <p>不仅可以拓展你的人脉，还能有效的解决你的问题。</p>
-                        </div>
-                        <div class="line"></div>
-                        <span class="icon"></span>
-                        <label class="label">Boss—将总</label>
-                    </div>
+                    <div class="dialog bg d-3" :class="{'fixed-mark': d3Fixed}"
+                         :style="{'background-image': `url(${review3})`}"></div>
+
+                    <div class="dialog bg d-4" :class="{'fixed-mark': d3Fixed}"
+                         :style="{'background-image': `url(${review4})`}"></div>
+
+                    <div class="input"></div>
                 </div>
             </div>
         </div>
@@ -706,42 +855,37 @@
         </div>
 
         <div class="capital">
+            <div class="content">
+                <div class="radar-panel">
+                    <div class="radar-big bg" :style="{'background-image': `url(${radarBig})`}"></div>
+                    <div class="radar-min bg" :style="{'background-image': `url(${radarMin})`}"></div>
 
+                    <div class="target target-1 bg" :style="{'background-image': `url(${target1})`}"></div>
+                    <div class="target target-2 bg" :style="{'background-image': `url(${target2})`}"></div>
+                    <div class="target target-3 bg" :style="{'background-image': `url(${target3})`}"></div>
+                    <div class="target target-4 bg" :style="{'background-image': `url(${target4})`}"></div>
+                    <div class="target target-5 bg" :style="{'background-image': `url(${target5})`}"></div>
+                    <div class="target target-6 bg" :style="{'background-image': `url(${target6})`}"></div>
+
+                    <div class="radar-wave bg" :style="{'background-image': `url(${radarWave})`}"></div>
+                    <div class="radar-logo bg" :style="{'background-image': `url(${radarLogo})`}"></div>
+                </div>
+            </div>
         </div>
 
         <div class="partner">
-            <div class="table">
-                <div class="row">
-                    <div class="cell">
-                        <span class="logo"></span>
-                    </div>
-                    <div class="cell">
-                        <span class="logo"></span>
-                    </div>
-                    <div class="cell">
-                        <span class="logo"></span>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="cell">
-                        <span class="logo"></span>
-                    </div>
-                    <div class="cell">
-                        <span class="logo"></span>
-                    </div>
-                    <div class="cell">
-                        <span class="logo"></span>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="cell">
-                        <span class="logo"></span>
-                    </div>
-                    <div class="cell">
-                        <span class="logo"></span>
-                    </div>
-                    <div class="cell">
-                        <span class="logo"></span>
+            <div class="content">
+                <div class="table">
+                    <div class="row" v-for="(item, index) in partnerList" :key="index">
+                        <div class="cell" v-for="(son, key) in item" :key="key">
+                            <template v-if="son.name">
+                                <span class="logo bg" :style="{'background-image': `url(${son.img})`}"></span>
+                                <p class="label">{{son.name}}</p>
+                            </template>
+                            <template v-else>
+                                <span class="logo last bg" :style="{'background-image': `url(${son.img})`}"></span>
+                            </template>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -764,7 +908,7 @@
                 <div class="info">
                     <p class="location">北京市海淀区学院路20号院北教一层117号</p>
                     <p class="mail">general@linkfinancier.com</p>
-                    <p class="record">京备123456789</p>
+                    <p class="record">网站备案：京ICP备17022003号-1</p>
                 </div>
             </div>
         </footer>
@@ -794,6 +938,65 @@
     import weixin from '../../static/img/qrcode-weixin.jpg';
     import xiaochengxu from '../../static/img/qrcode-xiaochengxu.jpg';
 
+    import radarLogo from '../../static/img/radarLogo.png';
+    import radarBig from '../../static/img/radarBig.png';
+    import radarMin from '../../static/img/radarMin.png';
+    import radarWave from '../../static/img/radarWave.png';
+
+    import review1 from '../../static/img/review1.png';
+    import review2 from '../../static/img/review2.png';
+    import review3 from '../../static/img/review3.png';
+    import review4 from '../../static/img/review4.png';
+
+    import partner1 from '../../static/img/partner1.png';
+    import partner2 from '../../static/img/partner2.png';
+    import partner3 from '../../static/img/partner3.png';
+    import partner4 from '../../static/img/partner4.png';
+    import partner5 from '../../static/img/partner5.png';
+    import partner6 from '../../static/img/partner6.png';
+    import partner7 from '../../static/img/partner7.png';
+    import partner8 from '../../static/img/partner8.png';
+    import partner9 from '../../static/img/partner9.png';
+    import partner10 from '../../static/img/partner10.png';
+    import partner11 from '../../static/img/partner11.png';
+    import partner12 from '../../static/img/partner12.png';
+    import partner13 from '../../static/img/partner13.png';
+    import partner14 from '../../static/img/partner14.png';
+    import partner15 from '../../static/img/partner15.png';
+    import partner16 from '../../static/img/partner16.png';
+
+    import target1 from '../../static/img/target1.png';
+    import target2 from '../../static/img/target2.png';
+    import target3 from '../../static/img/target3.png';
+    import target4 from '../../static/img/target4.png';
+    import target5 from '../../static/img/target5.png';
+    import target6 from '../../static/img/target6.png';
+
+    const partnerList = [
+        [
+            {name: '中心证券', img: partner1},
+            {name: '国金证券', img: partner2},
+            {name: '招商证券', img: partner3},
+            {name: '国泰瑞丰', img: partner4},
+        ], [
+            {name: '光大控股', img: partner5},
+            {name: '东北证券', img: partner6},
+            {name: '九鼎投资', img: partner7},
+            {name: '国泰君安证券', img: partner8},
+        ], [
+            {name: '中金公司', img: partner9},
+            {name: '方正证券', img: partner10},
+            {name: '天弘基金', img: partner11},
+            {name: '达晨创投', img: partner12},
+        ], [
+            {name: '中信建设证券', img: partner13},
+            {name: '鼎辉投资', img: partner14},
+            {name: '国信证券', img: partner15},
+            {name: '', img: partner16},
+        ],
+
+    ];
+
     export default {
         data() {
             return {
@@ -818,6 +1021,31 @@
 
                 weixin,
                 xiaochengxu,
+
+                radarLogo,
+                radarBig,
+                radarMin,
+                radarWave,
+
+                target1,
+                target2,
+                target3,
+                target4,
+                target5,
+                target6,
+
+                review1,
+                review2,
+                review3,
+                review4,
+
+                partnerList,
+
+                headerFixed: false,
+                d1Fixed: false,
+                d2Fixed: false,
+                d3Fixed: false,
+                d4Fixed: false,
             };
         },
 
@@ -826,10 +1054,28 @@
         },
 
         mounted() {
-
+            this.initPage();
         },
 
-        methods: {},
+        methods: {
+            initPage() {
+                const scroll = () => {
+                    const scrollTop = document.documentElement.scrollTop;
+                    this.headerFixed = scrollTop > 0;
+                    if (scrollTop > 550) {
+                        this.d1Fixed = true;
+                        this.d2Fixed = true;
+                        this.d3Fixed = true;
+                        this.d4Fixed = true;
+                    }
+                };
+                scroll();
+
+                window.addEventListener("scroll", scroll);
+                document.addEventListener("scroll", scroll);
+                document.body.addEventListener("scroll", scroll);
+            }
+        },
 
         computed: {},
 
