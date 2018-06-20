@@ -5,10 +5,13 @@ import Index from '../views';
 Vue.use(Router);
 
 export default new Router({
-  routes: [
-    {
-      path: '/',
-      component: Index
-    }
-  ]
+    routes: [
+        {
+            path: '/',
+            component: Index
+        }, {
+            path: '*',
+            component: Index
+        }
+    ]
 })

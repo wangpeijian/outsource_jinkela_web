@@ -10,9 +10,9 @@
         background-size: cover;
     }
 
-    $timerBig: 20s;
+    $timerDialog: 10s;
+    $timerBig: 5s;
     $timerWave: 10s;
-
 
     .home {
 
@@ -26,9 +26,10 @@
             left: 0;
             width: 100%;
             z-index: 99;
+            background: #22272F;
 
             &.fixed-mark {
-                background: #4b91ff;
+                background: #22272F;
             }
 
             .content {
@@ -61,9 +62,16 @@
                         transition: .2s;
                         font-size: 14px;
 
+                        a {
+                            color: #fff;
+                        }
+
                         &:hover {
                             background: #fff;
-                            color: #282B31;
+
+                            a {
+                                color: #282B31;
+                            }
                         }
                     }
 
@@ -84,6 +92,7 @@
         .banner {
             height: 716px;
             margin-bottom: 270px;
+            overflow: hidden;
 
             .content {
                 height: 100%;
@@ -140,14 +149,27 @@
                 bottom: 74px;
                 width: 1200px;
                 height: 270px;
-                background: gold;
+                background: #ffffff;
                 text-align: center;
                 padding-top: 55px;
+
+                .text {
+                    position: absolute;
+                    top: -100px;
+                    left: 220px;
+                    font-size: 25px;
+
+                    .with-line {
+                        border-bottom: 5px solid #37bdfd;
+                        display: inline-block;
+                        line-height: 45px;
+                    }
+                }
 
                 .info {
                     width: 220px;
                     display: inline-block;
-                    color: #fff;
+                    color: #000000;
 
                     .label {
                         font-size: 24px;
@@ -155,13 +177,13 @@
                         position: relative;
                         padding-bottom: 15px;
 
-                        .sub {
+                        /*.sub {
                             font-size: 12px;
                             position: absolute;
                             left: 0;
                             bottom: -15px;
                             width: 100%;
-                        }
+                        }*/
                     }
 
                     .num {
@@ -219,24 +241,22 @@
                         width: 570px;
                         height: 180px;
                         position: absolute;
-                        transition: 2.5s;
 
                         &.d-1 {
-                            top: 20px;
+                            /*top: 20px;*/
                             left: 100px;
                             transform: translateX(-250%);
-
                         }
 
                         &.d-2 {
-                            top: 210px;
+                            /*top: 210px;*/
                             left: 200px;
                             transform: translateX(250%);
 
                         }
 
                         &.d-3 {
-                            top: 400px;
+                            /*top: 400px;*/
                             left: 100px;
                             transform: translateX(-250%);
 
@@ -249,7 +269,131 @@
                         }
 
                         &.fixed-mark {
-                            transform: translateX(0%);
+                            &.d-1 {
+                                animation: dialog1 $timerDialog forwards;
+
+                                @keyframes dialog1 {
+                                    0% {
+                                        top: 590px;
+                                        transform: translateX(-250%);
+                                    }
+                                    20% {
+                                        top: 590px;
+                                        transform: translateX(0);
+                                    }
+                                    40% {
+                                        top: 400px;
+                                        transform: translateX(0);
+                                    }
+                                    60% {
+                                        top: 210px;
+                                        transform: translateX(0);
+                                    }
+                                    80% {
+                                        top: 20px;
+                                        transform: translateX(0);
+                                    }
+                                    100% {
+                                        top: 20px;
+                                        transform: translateX(0);
+                                    }
+                                }
+                            }
+
+                            &.d-2 {
+                                animation: dialog2 $timerDialog forwards;
+
+                                @keyframes dialog2 {
+                                    0% {
+                                        top: 590px;
+                                        transform: translateX(250%);
+                                    }
+                                    20% {
+                                        top: 590px;
+                                        transform: translateX(250%);
+                                    }
+                                    40% {
+                                        top: 590px;
+                                        transform: translateX(0);
+                                    }
+                                    60% {
+                                        top: 400px;
+                                        transform: translateX(0);
+                                    }
+                                    80% {
+                                        top: 210px;
+                                        transform: translateX(0);
+                                    }
+                                    100% {
+                                        top: 210px;
+                                        transform: translateX(0);
+                                    }
+                                }
+
+                            }
+
+                            &.d-3 {
+                                animation: dialog3 $timerDialog forwards;
+
+                                @keyframes dialog3 {
+                                    0% {
+                                        top: 590px;
+                                        transform: translateX(-250%);
+                                    }
+                                    20% {
+                                        top: 590px;
+                                        transform: translateX(-250%);
+                                    }
+                                    40% {
+                                        top: 590px;
+                                        transform: translateX(-250%);
+                                    }
+                                    60% {
+                                        top: 590px;
+                                        transform: translateX(0);
+                                    }
+                                    80% {
+                                        top: 400px;
+                                        transform: translateX(0);
+                                    }
+                                    100% {
+                                        top: 400px;
+                                        transform: translateX(0);
+                                    }
+                                }
+
+                            }
+
+                            &.d-4 {
+                                animation: dialog4 $timerDialog forwards;
+
+                                @keyframes dialog4 {
+                                    0% {
+                                        top: 590px;
+                                        transform: translateX(250%);
+                                    }
+                                    20% {
+                                        top: 590px;
+                                        transform: translateX(250%);
+                                    }
+                                    40% {
+                                        top: 590px;
+                                        transform: translateX(250%);
+                                    }
+                                    60% {
+                                        top: 590px;
+                                        transform: translateX(250%);
+                                    }
+                                    80% {
+                                        top: 590px;
+                                        transform: translateX(0);
+                                    }
+                                    100% {
+                                        top: 590px;
+                                        transform: translateX(0);
+                                    }
+                                }
+                            }
                         }
                     }
 
@@ -342,11 +486,12 @@
             background: #fff;
 
             .content {
+                padding-top: 85px;
 
                 .title {
                     width: 833px;
                     height: 204px;
-                    margin: 85px auto 35px auto;
+                    margin: 0 auto 35px auto;
                     background-size: 80%;
                 }
 
@@ -367,54 +512,54 @@
             background: #fff;
 
             .content {
-                padding-top: 50px;
+                padding-top: 90px;
 
-                .radar-panel{
+                .radar-panel {
                     position: relative;
                     width: 755px;
                     height: 755px;
                     margin: 0 auto;
                     /*background: red;*/
 
-                    .radar-big{
+                    .radar-big {
                         position: absolute;
+                        height: 755px;
+                        width: 755px;
                         top: 0;
                         left: 0;
-                        width: 100%;
-                        height: 100%;
                         animation: bigRadar $timerBig infinite linear;
 
-                        @keyframes bigRadar{
-                            from{
+                        @keyframes bigRadar {
+                            from {
                                 transform: rotate(0deg);
                             }
 
-                            to{
+                            to {
                                 transform: rotate(360deg);
                             }
                         }
                     }
 
-                    .radar-min{
+                    .radar-min {
                         position: absolute;
-                        top: 0;
-                        left: 0;
-                        width: 100%;
-                        height: 100%;
+                        top: 124px;
+                        left: 124px;
+                        height: 506px;
+                        width: 506px;
                         animation: minRadar $timerBig infinite linear;
 
-                        @keyframes minRadar{
-                            from{
+                        @keyframes minRadar {
+                            from {
                                 transform: rotate(0deg);
                             }
 
-                            to{
+                            to {
                                 transform: rotate(-360deg);
                             }
                         }
                     }
 
-                    .radar-logo{
+                    .radar-logo {
                         position: absolute;
                         top: 50%;
                         left: 50%;
@@ -423,31 +568,31 @@
                         height: 284px;
                     }
 
-                    .radar-wave{
+                    .radar-wave {
                         position: absolute;
                         top: 0;
                         left: 0;
-                        width: 100%;
-                        height: 100%;
+                        height: 755px;
+                        width: 755px;
                         animation: minWave $timerWave infinite linear;
 
-                        @keyframes minWave{
-                            from{
+                        @keyframes minWave {
+                            from {
                                 transform: rotate(0deg);
                             }
 
-                            to{
+                            to {
                                 transform: rotate(360deg);
                             }
                         }
                     }
 
-                    .target{
+                    .target {
                         position: absolute;
                         background-size: contain;
                         opacity: 0;
 
-                        &.target-1{
+                        &.target-1 {
                             top: 0;
                             left: 300px;
                             width: 130px;
@@ -455,26 +600,26 @@
 
                             animation: target1 $timerWave infinite linear;
 
-                            @keyframes target1{
-                                0%{
-                                    opacity: 1;
-                                }
-
-                                10%{
+                            @keyframes target1 {
+                                0% {
                                     opacity: 0;
                                 }
-
-                                90%{
+                                10% {
+                                    opacity: 1;
+                                }
+                                15% {
+                                    opacity: 1;
+                                }
+                                25% {
                                     opacity: 0;
                                 }
-
-                                100%{
-                                    opacity: 1;
+                                100% {
+                                    opacity: 0;
                                 }
                             }
                         }
 
-                        &.target-2{
+                        &.target-2 {
                             top: 200px;
                             left: 500px;
                             width: 131px;
@@ -482,30 +627,30 @@
 
                             animation: target2 $timerWave infinite linear;
 
-                            @keyframes target2{
-                                0%{
+                            @keyframes target2 {
+                                0% {
                                     opacity: 0;
                                 }
-
-                                10%{
+                                15% {
+                                    opacity: 0;
+                                }
+                                25% {
                                     opacity: 1;
                                 }
 
-                                15%{
+                                30% {
                                     opacity: 1;
                                 }
-
-                                25%{
+                                40% {
                                     opacity: 0;
                                 }
-
-                                100%{
+                                100% {
                                     opacity: 0;
                                 }
                             }
                         }
 
-                        &.target-3{
+                        &.target-3 {
                             top: 400px;
                             left: 600px;
                             width: 181px;
@@ -513,34 +658,29 @@
 
                             animation: target3 $timerWave infinite linear;
 
-                            @keyframes target3{
-                                0%{
+                            @keyframes target3 {
+                                0% {
                                     opacity: 0;
                                 }
-
-                                20%{
+                                30% {
                                     opacity: 0;
                                 }
-
-                                24%{
+                                40% {
                                     opacity: 1;
                                 }
-
-                                28%{
+                                45% {
                                     opacity: 1;
                                 }
-
-                                34%{
+                                55% {
                                     opacity: 0;
                                 }
-
-                                100%{
+                                100% {
                                     opacity: 0;
                                 }
                             }
                         }
 
-                        &.target-4{
+                        &.target-4 {
                             top: 500px;
                             left: 400px;
                             width: 130px;
@@ -548,34 +688,29 @@
 
                             animation: target4 $timerWave infinite linear;
 
-                            @keyframes target4{
-                                0%{
+                            @keyframes target4 {
+                                0% {
                                     opacity: 0;
                                 }
-
-                                30%{
+                                45% {
                                     opacity: 0;
                                 }
-
-                                35%{
+                                55% {
                                     opacity: 1;
                                 }
-
-                                43%{
+                                60% {
                                     opacity: 1;
                                 }
-
-                                48%{
+                                70% {
                                     opacity: 0;
                                 }
-
-                                100%{
+                                100% {
                                     opacity: 0;
                                 }
                             }
                         }
 
-                        &.target-5{
+                        &.target-5 {
                             top: 500px;
                             left: 0;
                             width: 181px;
@@ -583,34 +718,29 @@
 
                             animation: target5 $timerWave infinite linear;
 
-                            @keyframes target5{
-                                0%{
+                            @keyframes target5 {
+                                0% {
                                     opacity: 0;
                                 }
-
-                                50%{
+                                65% {
                                     opacity: 0;
                                 }
-
-                                58%{
+                                75% {
                                     opacity: 1;
                                 }
-
-                                68%{
+                                80% {
                                     opacity: 1;
                                 }
-
-                                78%{
+                                90% {
                                     opacity: 0;
                                 }
-
-                                100%{
+                                100% {
                                     opacity: 0;
                                 }
                             }
                         }
 
-                        &.target-6{
+                        &.target-6 {
                             top: 200px;
                             left: 100px;
                             width: 130px;
@@ -618,25 +748,21 @@
 
                             animation: target6 10s infinite linear;
 
-                            @keyframes target6{
-                                0%{
+                            @keyframes target6 {
+                                0% {
                                     opacity: 0;
                                 }
-
-                                75%{
+                                80% {
                                     opacity: 0;
                                 }
-
-                                80%{
+                                85% {
                                     opacity: 1;
                                 }
-
-                                87%{
+                                95% {
                                     opacity: 1;
                                 }
-
-                                100%{
-                                    opacity: 0;
+                                100% {
+                                    opacity: .5;
                                 }
                             }
                         }
@@ -646,7 +772,7 @@
         }
 
         .partner {
-            height: 1088px;
+            /*  height: 1088px;*/
             background: #333743;
 
             .table {
@@ -664,7 +790,7 @@
                     .cell {
                         text-align: center;
                         float: left;
-                        height: 232px;
+                        height: 200px;
                         width: 25%;
                         border-right: 2px solid #fff;
 
@@ -679,20 +805,12 @@
                             display: inline-block;
                             margin-top: 52px;
 
-                            &.last{
+                            &.last {
                                 border-radius: initial;
                                 width: 253px;
                                 height: 86px;
                                 margin-top: 72px;
                             }
-                        }
-
-                        .label {
-                            display: block;
-                            margin-top: 18px;
-                            font-size: 18px;
-                            color: rgba(255, 255, 255, 1);
-                            line-height: 25px;
                         }
                     }
                 }
@@ -701,6 +819,8 @@
 
         .footer {
             height: 493px;
+            background: #22272f;
+            border-top: 5px solid #3fb1f8;
 
             .content {
                 height: 100%;
@@ -762,10 +882,10 @@
             <div class="content">
                 <span class="logo">金客拉</span>
                 <p class="menu">
-                    <span class="item">项目</span>
-                    <span class="item">资金</span>
-                    <span class="item">人脉</span>
-                    <span class="item">关于我们</span>
+                    <span class="item"><a href="#recommend">项目</a></span>
+                    <span class="item"><a href="#institution">资金</a></span>
+                    <span class="item"><a href="#capital">人脉</a></span>
+                    <span class="item"><a href="#partner">关于我们</a></span>
                     <span class="menu-btn"></span>
                 </p>
             </div>
@@ -788,7 +908,8 @@
         </div>
 
         <div class="data">
-            <div class="data-panel bg" :style="{'background-image': `url(${dataBg})`}">
+            <div class="data-panel bg"><!--:style="{'background-image': `url(${dataBg})`}"-->
+                <p class="text"><span class="with-line">全领域金融市场</span>动态数据库</p>
                 <div class="info">
                     <label class="label">业务总量</label>
                     <span class="num">8k</span>
@@ -796,7 +917,7 @@
                 <div class="info">
                     <label class="label">
                         业务更新速度
-                        <span class="sub">（按最高的月数据）</span>
+                        <!-- <span class="sub">（按最高的月数据）</span>-->
                     </label>
                     <span class="num">800</span>
                 </div>
@@ -832,7 +953,7 @@
             </div>
         </div>
 
-        <div class="recommend">
+        <div class="recommend" id="recommend">
             <div class="content bg" :style="{'background-image': `url(${recommendBg})`}">
                 <div class="oval bg oval-1" :style="{'background-image': `url(${Oval1})`}"></div>
                 <div class="oval bg oval-2" :style="{'background-image': `url(${Oval2})`}"></div>
@@ -842,7 +963,7 @@
             </div>
         </div>
 
-        <div class="institution">
+        <div class="institution" id="institution">
             <div class="content">
                 <div class="title bg" :style="{'background-image': `url(${companyBg})`}"></div>
                 <div class="panel-group">
@@ -854,7 +975,7 @@
             </div>
         </div>
 
-        <div class="capital">
+        <div class="capital" id="capital">
             <div class="content">
                 <div class="radar-panel">
                     <div class="radar-big bg" :style="{'background-image': `url(${radarBig})`}"></div>
@@ -873,14 +994,14 @@
             </div>
         </div>
 
-        <div class="partner">
+        <div class="partner" id="partner">
             <div class="content">
                 <div class="table">
                     <div class="row" v-for="(item, index) in partnerList" :key="index">
                         <div class="cell" v-for="(son, key) in item" :key="key">
                             <template v-if="son.name">
                                 <span class="logo bg" :style="{'background-image': `url(${son.img})`}"></span>
-                                <p class="label">{{son.name}}</p>
+                                <!-- <p class="label">{{son.name}}</p>-->
                             </template>
                             <template v-else>
                                 <span class="logo last bg" :style="{'background-image': `url(${son.img})`}"></span>
@@ -891,7 +1012,7 @@
             </div>
         </div>
 
-        <footer class="footer bg" :style="{'background-image': `url(${footerBg})`}">
+        <footer class="footer bg"><!--:style="{'background-image': `url(${footerBg})`}"-->
             <div class="content">
 
                 <div class="qrcode-group">
@@ -916,8 +1037,8 @@
 </template>
 
 <script>
-    import footerBg from '../../static/img/footerBg.png';
-    import dataBg from '../../static/img/dataBg.jpg';
+    /* import footerBg from '../../static/img/footerBg.png';*/
+    /* import dataBg from '../../static/img/dataBg.jpg';*/
     import Phone from '../../static/img/Phone.png';
     import bannerBg from '../../static/img/bannerBg.jpg';
     import recommendBg from '../../static/img/recommendBg.jpg';
@@ -1001,8 +1122,8 @@
         data() {
             return {
                 Phone,
-                footerBg,
-                dataBg,
+                /* footerBg,*/
+                /* dataBg,*/
                 bannerBg,
                 recommendBg,
                 problem,
