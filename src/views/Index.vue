@@ -1181,7 +1181,7 @@
         methods: {
             initPage() {
                 const scroll = () => {
-                    const scrollTop = document.documentElement.scrollTop;
+                    const scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
                     this.headerFixed = scrollTop > 0;
                     if (scrollTop > 550) {
                         this.d1Fixed = true;
@@ -1193,8 +1193,7 @@
                 scroll();
 
                 window.addEventListener("scroll", scroll);
-                document.addEventListener("scroll", scroll);
-                document.body.addEventListener("scroll", scroll);
+               /* document.addEventListener("scroll", scroll);*/
             }
         },
 
