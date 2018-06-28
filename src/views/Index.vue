@@ -105,8 +105,8 @@
 
         .banner {
             height: 716px;
-            margin-bottom: 270px;
             overflow: hidden;
+            background: #000;
 
             .content {
                 height: 100%;
@@ -153,56 +153,38 @@
         .data {
             width: 1440px;
             margin: 0 auto;
-            height: 250px;
             background: #fff;
             position: relative;
 
             .data-panel {
-                position: absolute;
-                left: 120px;
-                bottom: 74px;
-                width: 1200px;
-                height: 270px;
+                height: 400px;
                 background: #ffffff;
                 text-align: center;
-                padding-top: 55px;
+                padding-top: 70px;
 
                 .text {
-                    position: absolute;
-                    top: -100px;
-                    left: 220px;
-                    font-size: 25px;
-
-                    .with-line {
-                        border-bottom: 5px solid #37bdfd;
-                        display: inline-block;
-                        line-height: 45px;
-                    }
+                    font-size: 30px;
+                    font-weight: bold;
+                    margin-bottom: 50px;
                 }
 
                 .info {
-                    width: 220px;
+                    width: 320px;
                     display: inline-block;
                     color: #000000;
+                   /* padding: 0 25px;*/
+
+                    .num {
+                        font-size: 72px;
+                        display: block;
+                        padding-bottom: 15px;
+                    }
 
                     .label {
                         font-size: 24px;
                         display: block;
                         position: relative;
-                        padding-bottom: 15px;
-
-                        /*.sub {
-                            font-size: 12px;
-                            position: absolute;
-                            left: 0;
-                            bottom: -15px;
-                            width: 100%;
-                        }*/
-                    }
-
-                    .num {
-                        font-size: 100px;
-                        display: block;
+                        color: #8D8D8D;
                     }
                 }
             }
@@ -212,7 +194,7 @@
             height: 820px;
             position: relative;
 
-            &::before, &::after {
+          /*  &::before, &::after {
                 content: "";
                 display: block;
                 width: 50%;
@@ -225,13 +207,13 @@
 
             &::before {
                 left: 0;
-                /*background: #fff;*/
+                !*background: #fff;*!
             }
 
             &::after {
                 right: 0;
-                /*background: #F8F9FA;*/
-            }
+                !*background: #F8F9FA;*!
+            }*/
 
             .content {
                 overflow: hidden;
@@ -241,6 +223,7 @@
                     width: 535px;
                     float: left;
                     height: 100%;
+                    border: 1px solid #E7E8EA;
                 }
 
                 .right {
@@ -441,7 +424,7 @@
             height: 1001px;
             position: relative;
 
-            &::before, &::after {
+          /*  &::before, &::after {
                 content: "";
                 display: block;
                 width: 50%;
@@ -460,13 +443,13 @@
             &::after {
                 right: 0;
                 background: #42bfff;
-            }
+            }*/
 
             .content {
                 height: 100%;
                 position: relative;
 
-                .oval {
+                /*.oval {
                     position: absolute;
                     transform: translateX(0);
                     transition: .5s;
@@ -532,6 +515,28 @@
                             transform: translateX(20%) scale(1.2, 1.2);
                         }
                     }
+                }*/
+
+                .title{
+                    font-size: 50px;
+                    text-align: center;
+                    letter-spacing: 30px;
+                }
+
+                .phonex {
+                    position: absolute;
+                    height: 787px;
+                    width: 394px;
+                    left: 242px;
+                    top: 200px;
+                }
+
+                .label{
+                    position: absolute;
+                    top: 480px;
+                    font-size: 70px;
+                    right: 253px;
+                    text-align: center;
                 }
             }
         }
@@ -541,13 +546,17 @@
             background: #fff;
 
             .content {
-                padding-top: 85px;
+                padding-top: 100px;
 
                 .title {
-                    width: 833px;
-                    height: 204px;
-                    margin: 0 auto 35px auto;
-                    background-size: 80%;
+                    /*width: 833px;*/
+                    /*height: 204px;*/
+                    /*margin: 0 auto 35px auto;*/
+                    /*background-size: 80%;*/
+                    font-size: 50px;
+                    text-align: center;
+                    letter-spacing: 30px;
+                    margin-bottom: 80px;
                 }
 
                 .panel-group {
@@ -557,12 +566,12 @@
                         width: 322px;
                         height: 228px;
                         display: inline-block;
-                        transition: .3s;
+                        /*transition: .3s;*/
 
-                        &:hover {
+                       /* &:hover {
                             transform: scale(1.5, 1.5);
                             z-index: 9;
-                        }
+                        }*/
                     }
                 }
             }
@@ -1263,30 +1272,32 @@
 
         .partner {
             /*  height: 1088px;*/
-            background: #333743;
+            /*background: #333743;*/
 
             .table {
                 padding: 75px 132px;
                 display: block;
+                text-align: center;
 
-                .title {
+              /*  .title {
                     width: 200px;
                     margin: 0 0 40px 40px;
-                }
+                }*/
 
                 .row {
-                    overflow: hidden;
+                    /*overflow: hidden;*/
 
                     .cell {
                         text-align: center;
-                        float: left;
+                        /*float: left;*/
                         width: 12.5%;
                         padding: 20px 0;
+                        display: inline-block;
 
                         .logo {
                             width: 100px;
                             height: 100px;
-                            border-radius: 50%;
+                            /*border-radius: 50%;*/
                             display: inline-block;
                         }
                     }
@@ -1295,27 +1306,30 @@
         }
 
         .footer {
-            height: 493px;
+            /*height: 493px;*/
             background: #22272f;
-            border-top: 5px solid #3fb1f8;
+            /*border-top: 5px solid #3fb1f8;*/
 
             .content {
+                overflow: hidden;
                 height: 100%;
                 color: rgba(255, 255, 255, 0.8);
                 position: relative;
 
                 .qrcode-group {
-                    padding-top: 72px;
+                    float: right;
+                    width: 600px;
+                    padding: 72px 100px 72px 0;
                     text-align: center;
 
                     .item {
-                        margin: 0 87px;
+                        margin: 0 30px;
                         text-align: center;
-                        width: 210px;
+                        width: 180px;
                         display: inline-block;
 
                         img {
-                            width: 210px;
+                            width: 180px;
                             display: block;
                             margin-bottom: 10px;
                         }
@@ -1327,13 +1341,11 @@
                 }
 
                 .info {
-                    position: absolute;
-                    bottom: 30px;
-                    left: 0;
-                    width: 100%;
-                    font-size: 18px;
-                    text-align: center;
-                    line-height: 30px;
+                    padding: 62px 30px 72px 90px;
+                    float: left;
+                    width: 840px;
+                    font-size: 24px;
+                    line-height: 48px;
 
                     .local {
 
@@ -1341,10 +1353,13 @@
 
                     .mail {
 
+                        .phone{
+                            padding-left: 10px;
+                        }
                     }
 
                     .record {
-
+                        margin-top: 50px;
                     }
                 }
             }
@@ -1378,7 +1393,7 @@
             </div>
         </header>
 
-        <div class="banner bg" :style="{'background-image': `url(${bannerBg})`}">
+        <div class="banner bg" ><!--:style="{'background-image': `url(${bannerBg})`}"-->
             <div class="content">
                 <span class="logo-img bg" :style="{'background-image': `url(${logo})`}"></span>
                 <div class="slogan">
@@ -1398,60 +1413,45 @@
             <div class="data-panel bg">
                 <p class="text"><span class="with-line">全领域金融市场</span>动态数据库</p>
                 <div class="info">
+                    <span class="num">8000+</span>
                     <label class="label">业务总量</label>
-                    <span class="num">8k</span>
                 </div>
                 <div class="info">
-                    <label class="label">
-                        业务更新速度
-                    </label>
-                    <span class="num">800</span>
+                    <span class="num">800+</span>
+                    <label class="label">业务更新速度</label>
                 </div>
                 <div class="info">
+                    <span class="num">50000+</span>
                     <label class="label">顶尖金融人</label>
-                    <span class="num">50k</span>
                 </div>
                 <div class="info">
+                    <span class="num">10000+</span>
                     <label class="label">机构数量</label>
-                    <span class="num">10k</span>
                 </div>
             </div>
         </div>
 
-        <div class="evaluate">
-            <div class="content">
-                <div class="left bg" :style="{'background-image': `url(${problem})`}"></div>
-                <div class="right">
-                    <div class="dialog bg d-1" :class="{'fixed-mark': d1Fixed}"
-                         :style="{'background-image': `url(${review1})`}"></div>
-
-                    <div class="dialog bg d-2" :class="{'fixed-mark': d2Fixed}"
-                         :style="{'background-image': `url(${review2})`}"></div>
-
-                    <div class="dialog bg d-3" :class="{'fixed-mark': d3Fixed}"
-                         :style="{'background-image': `url(${review3})`}"></div>
-
-                    <div class="dialog bg d-4" :class="{'fixed-mark': d3Fixed}"
-                         :style="{'background-image': `url(${review4})`}"></div>
-
-                    <div class="input"></div>
-                </div>
-            </div>
-        </div>
 
         <div class="recommend" id="recommend">
-            <div class="content bg" :style="{'background-image': `url(${recommendBg})`}">
-                <div class="oval bg oval-1"></div>  <!--:style="{'background-image': `url(${Oval1})`}"-->
-                <div class="oval bg oval-2"></div>  <!--:style="{'background-image': `url(${Oval2})`}"-->
-                <div class="oval bg oval-3" :style="{'background-image': `url(${Oval3})`}"></div>
-                <div class="oval bg oval-4"></div>  <!--:style="{'background-image': `url(${Oval4})`}"-->
-                <div class="oval bg oval-5"></div>  <!--:style="{'background-image': `url(${Oval5})`}"-->
+            <div class="content bg" ><!--:style="{'background-image': `url(${recommendBg})`}"-->
+                <!--<div class="oval bg oval-1"></div>-->  <!--:style="{'background-image': `url(${Oval1})`}"-->
+                <!--<div class="oval bg oval-2"></div>-->  <!--:style="{'background-image': `url(${Oval2})`}"-->
+                <!--<div class="oval bg oval-3"></div>--> <!--:style="{'background-image': `url(${Oval3})`}"-->
+                <!--<div class="oval bg oval-4"></div>-->  <!--:style="{'background-image': `url(${Oval4})`}"-->
+                <!--<div class="oval bg oval-5"></div>-->  <!--:style="{'background-image': `url(${Oval5})`}"-->
+                <h1 class="title">推荐项目</h1>
+                <div class="phonex bg" :style="{'background-image': `url(${phonex})`}"></div>
+                <div class="label">
+                    <p>项目</p>
+                    <p>触手可及</p>
+                </div>
             </div>
         </div>
+
 
         <div class="institution" id="institution">
             <div class="content">
-                <div class="title bg" :style="{'background-image': `url(${companyBg})`}"></div>
+                <div class="title" >机构信息</div><!--:style="{'background-image': `url(${companyBg})`}"-->
                 <div class="panel-group">
                     <div class="panel bg panel-1" :style="{'background-image': `url(${copy1})`}"></div>
                     <div class="panel bg panel-2" :style="{'background-image': `url(${copy2})`}"></div>
@@ -1506,10 +1506,33 @@
             </div>
         </div>
 
+
+
+        <div class="evaluate">
+            <div class="content">
+                <div class="left bg" :style="{'background-image': `url(${problem})`}"></div>
+                <div class="right">
+                    <div class="dialog bg d-1" :class="{'fixed-mark': d1Fixed}"
+                         :style="{'background-image': `url(${review1})`}"></div>
+
+                    <div class="dialog bg d-2" :class="{'fixed-mark': d2Fixed}"
+                         :style="{'background-image': `url(${review2})`}"></div>
+
+                    <div class="dialog bg d-3" :class="{'fixed-mark': d3Fixed}"
+                         :style="{'background-image': `url(${review3})`}"></div>
+
+                    <div class="dialog bg d-4" :class="{'fixed-mark': d3Fixed}"
+                         :style="{'background-image': `url(${review4})`}"></div>
+
+                    <div class="input"></div>
+                </div>
+            </div>
+        </div>
+
         <div class="partner" id="partner">
             <div class="content">
                 <div class="table">
-                    <img class="title" :src="partner16">
+                  <!--  <img class="title" :src="partner16">-->
                     <div class="row" v-for="(item, index) in partnerList" :key="index">
                         <div class="cell" v-for="(son, key) in item" :key="key">
                             <span class="logo bg" :style="{'background-image': `url(${son.img})`}"></span>
@@ -1533,8 +1556,9 @@
                 </div>
 
                 <div class="info">
+                    <p>北京金客科技有限公司</p>
                     <p class="location">北京市海淀区学院路20号院北教一层117号</p>
-                    <p class="mail">general@linkfinancier.com</p>
+                    <p class="mail">general@linkfinancier.com <span class="phone">010-59418080</span></p>
                     <p class="record">网站备案：京ICP备17022003号-1</p>
                 </div>
             </div>
@@ -1545,30 +1569,32 @@
 </template>
 
 <script>
-    /* import footerBg from '../../static/img/footerBg.png';*/
-    /* import dataBg from '../../static/img/dataBg.jpg';*/
+     // import footerBg from '../../static/img/footerBg.png';
+     // import dataBg from '../../static/img/dataBg.jpg';
     import Phone from '../../static/img/Phone.png';
     import logo from '../../static/img/logo.png';
-    import bannerBg from '../../static/img/bannerBg.jpg';
-    import recommendBg from '../../static/img/recommendBg.jpg';
+    // import bannerBg from '../../static/img/bannerBg.jpg';
+    // import recommendBg from '../../static/img/recommendBg.jpg';
     import problem from '../../static/img/problem.jpg';
-    import companyBg from '../../static/img/companyBg.png';
+    // import companyBg from '../../static/img/companyBg.png';
 
     import copy1 from '../../static/img/copy1.png';
     import copy2 from '../../static/img/copy2.png';
     import copy3 from '../../static/img/copy3.png';
     import copy4 from '../../static/img/copy4.png';
 
-    import Oval1 from '../../static/img/Oval1.png';
-    import Oval2 from '../../static/img/Oval2.png';
-    import Oval3 from '../../static/img/Oval3.png';
-    import Oval4 from '../../static/img/Oval4.png';
-    import Oval5 from '../../static/img/Oval5.png';
+    // import Oval1 from '../../static/img/Oval1.png';
+    // import Oval2 from '../../static/img/Oval2.png';
+    // import Oval3 from '../../static/img/Oval3.png';
+    // import Oval4 from '../../static/img/Oval4.png';
+    // import Oval5 from '../../static/img/Oval5.png';
 
-    import Oval1Hover from '../../static/img/Oval1Hover.png';
-    import Oval2Hover from '../../static/img/Oval2Hover.png';
-    import Oval4Hover from '../../static/img/Oval4Hover.png';
-    import Oval5Hover from '../../static/img/Oval5Hover.png';
+    // import Oval1Hover from '../../static/img/Oval1Hover.png';
+    // import Oval2Hover from '../../static/img/Oval2Hover.png';
+    // import Oval4Hover from '../../static/img/Oval4Hover.png';
+    // import Oval5Hover from '../../static/img/Oval5Hover.png';
+
+     import phonex from '../../static/img/phonex.png';
 
     import weixin from '../../static/img/qrcode-weixin.jpg';
     import xiaochengxu from '../../static/img/qrcode-xiaochengxu.jpg';
@@ -1598,7 +1624,7 @@
     import partner13 from '../../static/img/partner13.png';
     import partner14 from '../../static/img/partner14.png';
     import partner15 from '../../static/img/partner15.png';
-    import partner16 from '../../static/img/partner16.png';
+    // import partner16 from '../../static/img/partner16.png';
 
     import target1 from '../../static/img/target1.png';
     import target2 from '../../static/img/target2.png';
@@ -1634,13 +1660,13 @@
         data() {
             return {
                 Phone,
-                /* footerBg,*/
-                /* dataBg,*/
+                 // footerBg,
+                 // dataBg,
                 logo,
-                bannerBg,
-                recommendBg,
+                // bannerBg,
+                // recommendBg,
                 problem,
-                companyBg,
+                // companyBg,
                 network,
 
                 copy1,
@@ -1648,11 +1674,13 @@
                 copy3,
                 copy4,
 
-                Oval1,
-                Oval2,
-                Oval3,
-                Oval4,
-                Oval5,
+                phonex,
+
+                // Oval1,
+                // Oval2,
+                // Oval3,
+                // Oval4,
+                // Oval5,
 
                 weixin,
                 xiaochengxu,
@@ -1675,7 +1703,7 @@
                 review4,
 
                 partnerList,
-                partner16,
+                // partner16,
 
                 headerFixed: false,
                 d1Fixed: false,
