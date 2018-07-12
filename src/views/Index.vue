@@ -172,7 +172,6 @@
                     width: 320px;
                     display: inline-block;
                     color: #000000;
-                   /* padding: 0 25px;*/
 
                     .num {
                         font-size: 72px;
@@ -193,27 +192,6 @@
         .evaluate {
             height: 820px;
             position: relative;
-
-          /*  &::before, &::after {
-                content: "";
-                display: block;
-                width: 50%;
-                position: absolute;
-                top: 0;
-                bottom: 0;
-                height: 100%;
-                z-index: -1;
-            }
-
-            &::before {
-                left: 0;
-                !*background: #fff;*!
-            }
-
-            &::after {
-                right: 0;
-                !*background: #F8F9FA;*!
-            }*/
 
             .content {
                 overflow: hidden;
@@ -408,7 +386,6 @@
                     }
 
                     .input {
-                        background: url("../../static/img/input.png") center no-repeat;
                         background-size: contain;
                         position: absolute;
                         bottom: 10px;
@@ -424,100 +401,11 @@
             height: 1001px;
             position: relative;
 
-          /*  &::before, &::after {
-                content: "";
-                display: block;
-                width: 50%;
-                position: absolute;
-                top: 0;
-                bottom: 0;
-                height: 100%;
-                z-index: -1;
-            }
-
-            &::before {
-                left: 0;
-                background: #4596ff;
-            }
-
-            &::after {
-                right: 0;
-                background: #42bfff;
-            }*/
-
             .content {
                 height: 100%;
                 position: relative;
 
-                /*.oval {
-                    position: absolute;
-                    transform: translateX(0);
-                    transition: .5s;
-
-                    &.oval-1 {
-                        height: 300px;
-                        width: 300px;
-                        top: 300px;
-                        left: 280px;
-                        background-image: url("../../static/img/Oval1.png");
-
-                        &:hover {
-                            background-image: url("../../static/img/Oval1Hover.png");
-                            transform: translateX(-15%) scale(1.2, 1.2);
-                        }
-                    }
-
-                    &.oval-2 {
-                        height: 300px;
-                        width: 300px;
-                        top: 270px;
-                        left: 853px;
-                        background-image: url("../../static/img/Oval2.png");
-
-                        &:hover {
-                            background-image: url("../../static/img/Oval2Hover.png");
-                            transform: translateX(20%) scale(1.2, 1.2);
-                        }
-                    }
-
-                    &.oval-3 {
-                        height: 663px;
-                        width: 663px;
-                        top: 220px;
-                        left: 389px;
-                        z-index: 2;
-                        background-size: 100%;
-                        pointer-events: none;
-                    }
-
-                    &.oval-4 {
-                        height: 250px;
-                        width: 250px;
-                        top: 600px;
-                        left: 380px;
-                        background-image: url("../../static/img/Oval4.png");
-
-                        &:hover {
-                            background-image: url("../../static/img/Oval4Hover.png");
-                            transform: translateX(-20%) scale(1.5, 1.5);
-                        }
-                    }
-
-                    &.oval-5 {
-                        height: 300px;
-                        width: 300px;
-                        top: 590px;
-                        left: 800px;
-                        background-image: url("../../static/img/Oval5.png");
-
-                        &:hover {
-                            background-image: url("../../static/img/Oval5Hover.png");
-                            transform: translateX(20%) scale(1.2, 1.2);
-                        }
-                    }
-                }*/
-
-                .title{
+                .title {
                     font-size: 50px;
                     text-align: center;
                     letter-spacing: 30px;
@@ -531,7 +419,7 @@
                     top: 200px;
                 }
 
-                .label{
+                .label {
                     position: absolute;
                     top: 480px;
                     font-size: 70px;
@@ -549,10 +437,6 @@
                 padding-top: 100px;
 
                 .title {
-                    /*width: 833px;*/
-                    /*height: 204px;*/
-                    /*margin: 0 auto 35px auto;*/
-                    /*background-size: 80%;*/
                     font-size: 50px;
                     text-align: center;
                     letter-spacing: 30px;
@@ -566,12 +450,6 @@
                         width: 322px;
                         height: 228px;
                         display: inline-block;
-                        /*transition: .3s;*/
-
-                       /* &:hover {
-                            transform: scale(1.5, 1.5);
-                            z-index: 9;
-                        }*/
                     }
                 }
             }
@@ -837,7 +715,6 @@
                             left: 0;
                             width: 130px;
                             height: 187px;
-                            background-image: url("../../static/img/target6.png");
                             animation: target6 $timerWave infinite linear;
                             transform: scale(1, 1);
 
@@ -855,12 +732,10 @@
                                 }
                                 67% {
                                     opacity: 1;
-                                    background-image: url("../../static/img/target6Active.png");
                                     transform: scale(1.5, 1.5);
                                 }
                                 100% {
                                     opacity: 1;
-                                    background-image: url("../../static/img/target6Active.png");
                                     transform: scale(1.5, 1.5);
                                 }
                             }
@@ -911,7 +786,6 @@
                         top: 200px;
                         width: 270px;
                         height: 270px;
-                        background-image: url("../../static/img/radarLogo.png");
                     }
 
                     .left-card {
@@ -920,8 +794,6 @@
                         top: 400px;
                         width: 344px;
                         height: 226px;
-                        background-image: url("../../static/img/card1.png");
-
                         transform: translateX(0%);
                         animation: card1 $timerCard infinite linear alternate;
 
@@ -946,7 +818,6 @@
                         top: 250px;
                         width: 134px;
                         height: 143px;
-                        background-image: url("../../static/img/target6.png");
                     }
 
                     .right-card {
@@ -955,8 +826,6 @@
                         top: 100px;
                         width: 344px;
                         height: 226px;
-                        background-image: url("../../static/img/card2.png");
-
                         transform: translateX(0%);
                         animation: card2 $timerCard infinite linear alternate;
 
@@ -1019,7 +888,6 @@
                         top: 200px;
                         width: 270px;
                         height: 270px;
-                        background-image: url("../../static/img/radarLogo.png");
                     }
 
                     .right-people {
@@ -1028,7 +896,6 @@
                         top: 250px;
                         width: 134px;
                         height: 143px;
-                        background-image: url("../../static/img/target6.png");
                     }
 
                     .talk {
@@ -1045,7 +912,6 @@
                         }
 
                         &.talk-1 {
-                            background-image: url("../../static/img/talk1.png");
                             height: 110px;
                             width: 570px;
                             top: 45px;
@@ -1072,7 +938,6 @@
                         }
 
                         &.talk-2 {
-                            background-image: url("../../static/img/talk2.png");
                             height: 147px;
                             width: 647px;
                             top: 150px;
@@ -1099,7 +964,6 @@
                         }
 
                         &.talk-3 {
-                            background-image: url("../../static/img/talk3.png");
                             height: 110px;
                             width: 423px;
                             top: 285px;
@@ -1126,7 +990,6 @@
                         }
 
                         &.talk-4 {
-                            background-image: url("../../static/img/talk4.png");
                             height: 228px;
                             width: 647px;
                             top: 385px;
@@ -1153,7 +1016,6 @@
                         }
 
                         &.talk-5 {
-                            background-image: url("../../static/img/talk5.png");
                             height: 110px;
                             width: 306px;
                             top: 600px;
@@ -1253,8 +1115,6 @@
                         top: 350px;
                         width: 134px;
                         height: 143px;
-                        background-image: url("../../static/img/target6.png");
-
                         animation: peopleTime $timerNetwork infinite linear;
 
                         @keyframes peopleTime {
@@ -1271,25 +1131,16 @@
         }
 
         .partner {
-            /*  height: 1088px;*/
-            /*background: #333743;*/
 
             .table {
                 padding: 75px 132px;
                 display: block;
                 text-align: center;
 
-              /*  .title {
-                    width: 200px;
-                    margin: 0 0 40px 40px;
-                }*/
-
                 .row {
-                    /*overflow: hidden;*/
 
                     .cell {
                         text-align: center;
-                        /*float: left;*/
                         width: 12.5%;
                         padding: 20px 0;
                         display: inline-block;
@@ -1297,7 +1148,6 @@
                         .logo {
                             width: 100px;
                             height: 100px;
-                            /*border-radius: 50%;*/
                             display: inline-block;
                         }
                     }
@@ -1306,9 +1156,7 @@
         }
 
         .footer {
-            /*height: 493px;*/
             background: #22272f;
-            /*border-top: 5px solid #3fb1f8;*/
 
             .content {
                 overflow: hidden;
@@ -1353,7 +1201,7 @@
 
                     .mail {
 
-                        .phone{
+                        .phone {
                             padding-left: 10px;
                         }
                     }
@@ -1365,7 +1213,7 @@
             }
         }
 
-        .top-btn{
+        .top-btn {
             position: fixed;
             right: 50px;
             bottom: 200px;
@@ -1393,7 +1241,7 @@
             </div>
         </header>
 
-        <div class="banner bg" ><!--:style="{'background-image': `url(${bannerBg})`}"-->
+        <div class="banner bg"><!--:style="{'background-image': `url(${bannerBg})`}"-->
             <div class="content">
                 <span class="logo-img bg" :style="{'background-image': `url(${logo})`}"></span>
                 <div class="slogan">
@@ -1433,7 +1281,7 @@
 
 
         <div class="recommend" id="recommend">
-            <div class="content bg" ><!--:style="{'background-image': `url(${recommendBg})`}"-->
+            <div class="content bg"><!--:style="{'background-image': `url(${recommendBg})`}"-->
                 <!--<div class="oval bg oval-1"></div>-->  <!--:style="{'background-image': `url(${Oval1})`}"-->
                 <!--<div class="oval bg oval-2"></div>-->  <!--:style="{'background-image': `url(${Oval2})`}"-->
                 <!--<div class="oval bg oval-3"></div>--> <!--:style="{'background-image': `url(${Oval3})`}"-->
@@ -1451,7 +1299,7 @@
 
         <div class="institution" id="institution">
             <div class="content">
-                <div class="title" >机构信息</div><!--:style="{'background-image': `url(${companyBg})`}"-->
+                <div class="title">机构信息</div><!--:style="{'background-image': `url(${companyBg})`}"-->
                 <div class="panel-group">
                     <div class="panel bg panel-1" :style="{'background-image': `url(${copy1})`}"></div>
                     <div class="panel bg panel-2" :style="{'background-image': `url(${copy2})`}"></div>
@@ -1472,40 +1320,39 @@
                     <div class="target target-3 bg" :style="{'background-image': `url(${target3})`}"></div>
                     <div class="target target-4 bg" :style="{'background-image': `url(${target4})`}"></div>
                     <div class="target target-5 bg" :style="{'background-image': `url(${target5})`}"></div>
-                    <div class="target target-6 bg"></div>  <!--:style="{'background-image': `url(${target6})`}"-->
+                    <div class="target target-6 bg" :style="{'background-image': `url(${target6})`}"></div>
 
                     <div class="radar-wave bg" :style="{'background-image': `url(${radarWave})`}"></div>
                     <div class="radar-logo bg" :style="{'background-image': `url(${radarLogo})`}"></div>
                 </div>
 
                 <div class="card-panel">
-                    <span class="left-people bg"></span>
-                    <span class="left-card bg"></span>
+                    <span class="left-people bg" :style="{'background-image': `url(${radarLogo})`}"></span>
+                    <span class="left-card bg" :style="{'background-image': `url(${card1})`}"></span>
 
-                    <span class="right-people bg"></span>
-                    <span class="right-card bg"></span>
+                    <span class="right-people bg" :style="{'background-image': `url(${target6})`}"></span>
+                    <span class="right-card bg" :style="{'background-image': `url(${card2})`}">></span>
                 </div>
 
                 <div class="talk-panel">
-                    <span class="left-people bg"></span>
+                    <span class="left-people bg" :style="{'background-image': `url(${radarLogo})`}"></span>
 
-                    <span class="talk left talk-1  bg"></span>
-                    <span class="talk right talk-2 bg"></span>
-                    <span class="talk left talk-3  bg"></span>
-                    <span class="talk right talk-4 bg"></span>
-                    <span class="talk left talk-5 bg"></span>
+                    <span class="talk left talk-1  bg" :style="{'background-image': `url(${talk1})`}"></span>
+                    <span class="talk right talk-2 bg" :style="{'background-image': `url(${talk2})`}"></span>
+                    <span class="talk left talk-3  bg" :style="{'background-image': `url(${talk3})`}"></span>
+                    <span class="talk right talk-4 bg" :style="{'background-image': `url(${talk4})`}"></span>
+                    <span class="talk left talk-5 bg" :style="{'background-image': `url(${talk5})`}"></span>
 
-                    <span class="right-people bg"></span>
+                    <span class="right-people bg" :style="{'background-image': `url(${target6})`}"></span>
                 </div>
 
                 <div class="network-panel">
                     <span class="network bg" :style="{'background-image': `url(${network})`}"></span>
                     <span class="line"></span>
-                    <span class="people bg"></span>
+                    <span class="people bg" :style="{'background-image': `url(${target6})`}"></span>
                 </div>
             </div>
         </div>
-
 
 
         <div class="evaluate">
@@ -1524,7 +1371,7 @@
                     <div class="dialog bg d-4" :class="{'fixed-mark': d3Fixed}"
                          :style="{'background-image': `url(${review4})`}"></div>
 
-                    <div class="input"></div>
+                    <div class="input bg"></div>
                 </div>
             </div>
         </div>
@@ -1532,7 +1379,7 @@
         <div class="partner" id="partner">
             <div class="content">
                 <div class="table">
-                  <!--  <img class="title" :src="partner16">-->
+                    <!--  <img class="title" :src="partner16">-->
                     <div class="row" v-for="(item, index) in partnerList" :key="index">
                         <div class="cell" v-for="(son, key) in item" :key="key">
                             <span class="logo bg" :style="{'background-image': `url(${son.img})`}"></span>
@@ -1569,32 +1416,16 @@
 </template>
 
 <script>
-     // import footerBg from '../../static/img/footerBg.png';
-     // import dataBg from '../../static/img/dataBg.jpg';
     import Phone from '../../static/img/Phone.png';
     import logo from '../../static/img/logo.png';
-    // import bannerBg from '../../static/img/bannerBg.jpg';
-    // import recommendBg from '../../static/img/recommendBg.jpg';
     import problem from '../../static/img/problem.jpg';
-    // import companyBg from '../../static/img/companyBg.png';
 
     import copy1 from '../../static/img/copy1.png';
     import copy2 from '../../static/img/copy2.png';
     import copy3 from '../../static/img/copy3.png';
     import copy4 from '../../static/img/copy4.png';
 
-    // import Oval1 from '../../static/img/Oval1.png';
-    // import Oval2 from '../../static/img/Oval2.png';
-    // import Oval3 from '../../static/img/Oval3.png';
-    // import Oval4 from '../../static/img/Oval4.png';
-    // import Oval5 from '../../static/img/Oval5.png';
-
-    // import Oval1Hover from '../../static/img/Oval1Hover.png';
-    // import Oval2Hover from '../../static/img/Oval2Hover.png';
-    // import Oval4Hover from '../../static/img/Oval4Hover.png';
-    // import Oval5Hover from '../../static/img/Oval5Hover.png';
-
-     import phonex from '../../static/img/phonex.png';
+    import phonex from '../../static/img/phonex.png';
 
     import weixin from '../../static/img/qrcode-weixin.jpg';
     import xiaochengxu from '../../static/img/qrcode-xiaochengxu.jpg';
@@ -1624,7 +1455,8 @@
     import partner13 from '../../static/img/partner13.png';
     import partner14 from '../../static/img/partner14.png';
     import partner15 from '../../static/img/partner15.png';
-    // import partner16 from '../../static/img/partner16.png';
+
+    import input from "../../static/img/input.png";
 
     import target1 from '../../static/img/target1.png';
     import target2 from '../../static/img/target2.png';
@@ -1634,6 +1466,16 @@
     import target6 from '../../static/img/target6.png';
 
     import network from '../../static/img/network.png';
+
+    import talk1 from '../../static/img/talk1.png';
+    import talk2 from '../../static/img/talk2.png';
+    import talk3 from '../../static/img/talk3.png';
+    import talk4 from '../../static/img/talk4.png';
+    import talk5 from '../../static/img/talk5.png';
+
+    import card1 from "../../static/img/card1.png";
+    import card2 from "../../static/img/card2.png";
+
 
     const partnerList = [
         [
@@ -1659,51 +1501,40 @@
     export default {
         data() {
             return {
+                card1,
+                card2,
+                radarLogo,
                 Phone,
-                 // footerBg,
-                 // dataBg,
                 logo,
-                // bannerBg,
-                // recommendBg,
                 problem,
-                // companyBg,
                 network,
-
                 copy1,
                 copy2,
                 copy3,
                 copy4,
-
                 phonex,
-
-                // Oval1,
-                // Oval2,
-                // Oval3,
-                // Oval4,
-                // Oval5,
-
                 weixin,
                 xiaochengxu,
-
-                radarLogo,
                 radarBig,
                 radarMin,
                 radarWave,
-
                 target1,
                 target2,
                 target3,
                 target4,
                 target5,
                 target6,
-
                 review1,
                 review2,
                 review3,
                 review4,
-
                 partnerList,
-                // partner16,
+                input,
+                talk1,
+                talk2,
+                talk3,
+                talk4,
+                talk5,
 
                 headerFixed: false,
                 d1Fixed: false,
@@ -1737,10 +1568,9 @@
                 scroll();
 
                 window.addEventListener("scroll", scroll);
-                /* document.addEventListener("scroll", scroll);*/
             },
 
-            toTop(){
+            toTop() {
                 window.scrollTo(0, 0);
             }
         },
