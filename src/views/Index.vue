@@ -1418,7 +1418,7 @@
 <script>
     import Phone from '../../static/img/Phone.png';
     import logo from '../../static/img/logo.png';
-    import problem from '../../static/img/problem.jpg';
+    import problem from '../../static/img/problem.png';
 
     import copy1 from '../../static/img/copy1.png';
     import copy2 from '../../static/img/copy2.png';
@@ -1427,8 +1427,8 @@
 
     import phonex from '../../static/img/phonex.png';
 
-    import weixin from '../../static/img/qrcode-weixin.jpg';
-    import xiaochengxu from '../../static/img/qrcode-xiaochengxu.jpg';
+    import weixin from '../../static/img/qrcode-weixin.png';
+    import xiaochengxu from '../../static/img/qrcode-xiaochengxu.png';
 
     import radarLogo from '../../static/img/radarLogo.png';
     import radarBig from '../../static/img/radarBig.png';
